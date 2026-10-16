@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | CampusConnect</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a class="brand" href="/home">Campus<span>Connect</span></a>
+
+        <form action="/logout" method="POST">
+            <button class="logout-button" type="submit">Log out</button>
+        </form>
+    </header>
+
+    <main class="home-container">
+        <section class="welcome-panel">
+            <p class="eyebrow">YOUR STUDENT SPACE</p>
+
+            <h1>Hello, <%= name %>!</h1>
+
+            <p class="welcome-text">
+                Welcome back. It's good to have you here.
+                Make today a little more productive.
+            </p>
+
+            <div class="student-details">
+                <div class="detail-item">
+                    <span class="detail-label">FULL NAME</span>
+                    <p><%= name %></p>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-label">EMAIL ADDRESS</span>
+                    <p><%= email %></p>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-label">BRANCH</span>
+                    <p><%= branch %></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-note">
+            <div class="note-mark">✳</div>
+            <div>
+                <h2>One step at a time.</h2>
+                <p>
+                    Keep learning, stay curious, and give yourself
+                    credit for the progress you make.
+                </p>
+            </div>
+        </section>
+
+        <footer class="home-footer">
+            Made for your college journey.
+        </footer>
+    </main>
+</body>
+</html>

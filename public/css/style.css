@@ -1,0 +1,380 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --green: #38664d;
+    --green-dark: #274b37;
+    --green-light: #e7f0e7;
+    --cream: #faf5e9;
+    --text: #26352b;
+    --muted: #758078;
+    --border: #dfe7dd;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(ellipse at 10% 10%, #dcebdc 0, transparent 38%),
+        radial-gradient(ellipse at 90% 90%, #f2e8d2 0, transparent 35%),
+        #f5f7f1;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--green-dark);
+}
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 36px 18px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 38px 40px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(223, 231, 221, 0.9);
+    border-radius: 22px;
+    box-shadow: 0 20px 60px rgba(41, 70, 48, 0.12);
+}
+
+.register-card {
+    max-width: 480px;
+}
+
+.brand {
+    display: inline-block;
+    color: var(--text);
+    font-family: 'Manrope', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.brand span {
+    color: var(--green);
+}
+
+.form-heading {
+    margin: 30px 0 25px;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.form-heading h1 {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(26px, 5vw, 32px);
+    line-height: 1.3;
+    letter-spacing: -1px;
+    font-weight: 800;
+}
+
+.form-heading > p:last-child {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34483a;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    height: 49px;
+    padding: 0 14px;
+    color: var(--text);
+    background: #fbfcfa;
+    border: 1px solid #dce5da;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #a1aaa1;
+    font-size: 13px;
+}
+
+.form-group input:hover {
+    border-color: #b7cbb8;
+}
+
+.form-group input:focus {
+    background: #ffffff;
+    border-color: var(--green);
+    box-shadow: 0 0 0 4px rgba(56, 102, 77, 0.12);
+}
+
+.primary-button {
+    display: block;
+    width: 100%;
+    min-height: 49px;
+    margin-top: 8px;
+    padding: 12px 18px;
+    color: #ffffff;
+    background: var(--green);
+    border: 0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(56, 102, 77, 0.16);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.primary-button:hover {
+    background: var(--green-dark);
+    transform: translateY(-1px);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+.form-footer {
+    margin: 23px 0 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.form-footer a {
+    margin-left: 3px;
+    font-weight: 700;
+}
+
+.fine-print {
+    margin: 24px 0 0;
+    padding-top: 18px;
+    border-top: 1px solid #edf0eb;
+    color: #919a91;
+    text-align: center;
+    font-size: 11px;
+}
+
+.alert {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    color: #9e3930;
+    background: #fff0ed;
+    border: 1px solid #f6d8d1;
+    border-radius: 9px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Home page */
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 max(6%, calc((100% - 1080px) / 2));
+    background: rgba(255, 255, 255, 0.88);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar form {
+    margin: 0;
+}
+
+.logout-button {
+    padding: 10px 17px;
+    color: var(--green-dark);
+    background: var(--green-light);
+    border: 1px solid #d5e4d4;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: #d9e9d9;
+}
+
+.home-container {
+    width: min(100% - 36px, 900px);
+    margin: 55px auto 30px;
+}
+
+.welcome-panel {
+    padding: clamp(26px, 6vw, 50px);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(41, 70, 48, 0.06);
+}
+
+.welcome-panel h1 {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(32px, 5vw, 45px);
+    letter-spacing: -1.3px;
+}
+
+.welcome-text {
+    max-width: 510px;
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.student-details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 32px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+}
+
+.detail-item {
+    min-width: 0;
+    padding: 17px 14px;
+    background: #f5f8f3;
+    border: 1px solid #eaf0e7;
+    border-radius: 12px;
+}
+
+.detail-label {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.detail-item p {
+    overflow-wrap: anywhere;
+    margin: 9px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.home-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 20px;
+    padding: 24px;
+    background: #e7f0e7;
+    border: 1px solid #dbe8d9;
+    border-radius: 18px;
+}
+
+.note-mark {
+    display: grid;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    color: var(--green);
+    background: #ffffff;
+    border-radius: 12px;
+    font-size: 23px;
+}
+
+.home-note h2 {
+    margin: 2px 0 8px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+}
+
+.home-note p {
+    margin: 0;
+    color: #68766a;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.home-footer {
+    padding: 26px 0;
+    color: #858e85;
+    text-align: center;
+    font-size: 12px;
+}
+
+@media (max-width: 560px) {
+    .auth-card {
+        padding: 28px 22px;
+        border-radius: 17px;
+    }
+
+    .form-heading {
+        margin-top: 26px;
+    }
+
+    .navbar {
+        min-height: 68px;
+        padding: 0 20px;
+    }
+
+    .home-container {
+        margin-top: 28px;
+    }
+
+    .student-details {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .home-note {
+        padding: 19px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
